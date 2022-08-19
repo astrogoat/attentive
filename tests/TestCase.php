@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Attentive\Tests;
 
+use Astrogoat\Attentive\AttentiveServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Attentive\AttentiveServiceProvider;
 
 class TestCase extends Orchestra
 {
