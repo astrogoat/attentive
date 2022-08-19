@@ -17,15 +17,6 @@ class AttentiveSettings extends AppSettings
         ];
     }
 
-    // protected static array $actions = [
-    //     AttentiveAction::class,
-    // ];
-
-    // public static function encrypted(): array
-    // {
-    //     return ['access_token'];
-    // }
-
     public function description(): string
     {
         return 'Interact with Attentive.';
