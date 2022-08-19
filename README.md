@@ -1,4 +1,4 @@
-# An Attentive app for Stratum
+# An Attentive app for Strata
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/astrogoat/attentive.svg?style=flat-square)](https://packagist.org/packages/astrogoat/attentive)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/astrogoat/attentive/run-tests?label=tests)](https://github.com/astrogoat/attentive/actions?query=workflow%3Arun-tests+branch%3Amain)
