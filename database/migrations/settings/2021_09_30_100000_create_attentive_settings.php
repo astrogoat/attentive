@@ -15,6 +15,5 @@ class CreateAttentiveSettings extends SettingsMigration
     {
         $this->migrator->delete('attentive.enabled');
         $this->migrator->delete('attentive.url');
-        // $this->migrator->delete('attentive.access_token');
     }
 }
