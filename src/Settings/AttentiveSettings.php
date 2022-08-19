@@ -2,7 +2,6 @@
 
 namespace Astrogoat\Attentive\Settings;
 
-use Astrogoat\Attentive\Actions\AttentiveAction;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
 
