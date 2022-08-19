@@ -10,23 +10,25 @@ use Astrogoat\Attentive\Settings\AttentiveSettings;
 
 class AttentiveServiceProvider extends PackageServiceProvider
 {
-    public function registerApp(App $app)
+    public function registerApp(LegoManager $stratum)
     {
-        return $app
-            ->name('attentive')
-            ->settings(AttentiveSettings::class)
-            ->migrations([
-                __DIR__ . '/../database/migrations',
-                __DIR__ . '/../database/migrations/settings',
-            ])
-            ->backendRoutes(__DIR__.'/../routes/backend.php')
-            ->frontendRoutes(__DIR__.'/../routes/frontend.php');
+        $stratum->registerApp(function (App $app) {
+            return $app
+                ->name('attentive')
+                ->settings(AttentiveSettings::class)
+                ->migrations([
+                    __DIR__ . '/../database/migrations',
+                    __DIR__ . '/../database/migrations/settings',
+                ])
+                ->backendRoutes(__DIR__.'/../routes/backend.php')
+                ->frontendRoutes(__DIR__.'/../routes/frontend.php');
+        });
     }
 
     public function registeringPackage()
     {
         $this->callAfterResolving('lego', function (LegoManager $lego) {
-            $lego->registerApp(fn (App $app) => $this->registerApp($app));
+            $this->registerApp($lego);
         });
     }
 

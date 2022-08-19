@@ -8,12 +8,12 @@ use Astrogoat\Attentive\Actions\AttentiveAction;
 
 class AttentiveSettings extends AppSettings
 {
-    // public string $url;
+    public string $url;
 
     public function rules(): array
     {
         return [
-            // 'url' => Rule::requiredIf($this->enabled === true),
+            'url' => Rule::requiredIf($this->enabled === true),
         ];
     }
 
