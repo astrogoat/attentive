@@ -8,7 +8,6 @@ class CreateAttentiveSettings extends SettingsMigration
     {
         $this->migrator->add('attentive.enabled', false);
         $this->migrator->add('attentive.url', '');
-        // $this->migrator->addEncrypted('attentive.access_token', '');
     }
 
     public function down()
