@@ -2,10 +2,11 @@
 
 namespace Astrogoat\Attentive;
 
-use Astrogoat\Attentive\Settings\AttentiveSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
+use Astrogoat\Attentive\Settings\AttentiveSettings;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class AttentiveServiceProvider extends PackageServiceProvider
@@ -19,7 +20,9 @@ class AttentiveServiceProvider extends PackageServiceProvider
                 ->migrations([
                     __DIR__ . '/../database/migrations',
                     __DIR__ . '/../database/migrations/settings',
-                ]);
+                ])->includeFrontendViews(function (IncludeFrontendViews $views) {
+                    return $views->addToEnd(['attentive::script']);
+                });
         });
     }
 
@@ -32,6 +35,6 @@ class AttentiveServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name('attentive')->hasViews();
+        $package->name('attentive')->hasViews()->hasConfigFile();
     }
 }
