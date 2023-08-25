@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Attentive;
 
+use Astrogoat\Attentive\Settings\AttentiveSettings;
 use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
-use Helix\Lego\Apps\Services\IncludeFrontendViews;
-use Astrogoat\Attentive\Settings\AttentiveSettings;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class AttentiveServiceProvider extends PackageServiceProvider
